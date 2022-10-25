@@ -1,0 +1,197 @@
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.start{
+    width: 100%;
+    height: 100%;
+    background: url(../img/start/bg.png) no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    transition: all 1s;
+    /* display: none; */
+}
+.start-aom{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.girl{
+    width: 250px;
+    height: 250px;
+    display: block;
+    margin: 0 auto;
+    transform: translateY(70px);
+    animation: jump 1s;
+}
+ @keyframes jump{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(160px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+.title{
+    width: 400px;
+    height: 200px;
+    display: block;
+    /* margin: 0 auto; */
+    position: relative;
+    z-index: 1000;
+}
+.playbtn{
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    bottom: 50px;
+    animation: run 1s infinite;
+}
+.playbtn:hover{
+    cursor: pointer;
+}
+@keyframes run{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+/* 加载界面开始 */
+.load{
+    width: 100%;
+    height: 100%;
+    background: url(../img/load/bg.png) no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: all 1s;
+    /* display: none; */
+    z-index: 1000;
+}
+.loading{
+    width: 500px;
+    height: 500px;
+    background: url(../img/load/loading1.png) center no-repeat;
+    background-size: 100% auto ;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: none; */
+}
+.loadTiao{
+    width: 303px;
+    height: 39px;
+    background: url(../img/load/loadingProgress.png) center no-repeat;
+    background-size: 100% auto;
+    display: block;
+    margin: 220px auto 0;
+    position: relative;
+}
+.progresscon{
+    width: 0px;
+    height: 19px;
+    background: url(../img/load/progresscon.png);
+    position: absolute;
+    left: 5px;
+    top: 9px;
+    border-radius: 15px;
+}
+.progresscon span{
+    text-align: center;
+    width: 303px;
+    display: block;
+}
+/* 加载界面结束 */
+/* 游戏开始 */
+.plays{
+    width: 100%;
+    height: 100%;
+    background:url(../img/play/bg.png) center/cover no-repeat ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 999;
+}
+.main{
+    width: 100%;
+    height: 100px;
+    position: relative;
+    z-index: 10;
+    float: left;
+    transition: all 5s;
+}
+.main img{
+    transition: all 0.2s;
+}
+
+.xuetiao{
+    width: 204px;
+    height: 48px;
+    background: url(../img/play/life.png) center no-repeat;
+    background-size: contain;
+    z-index: 100;
+    float: left;
+    position: absolute;
+    top: 19px;
+    left: 194px;
+}
+.xuetiao1{
+    width: 132px;
+    height: 24px;
+    background-color: rgb(224, 31, 31);
+    position: absolute;
+    top: 13px;
+    left: 60px;
+    border-radius: 7px;
+}
+.fenshu{
+    width: 168px;
+    height: 53px;
+    background: url(../img/play/fenzhi.png) center no-repeat;
+    background-size: contain;
+    z-index: 100;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.fenshu span{
+    font-size: 20px;
+    color: #fff;
+    display: block;
+    margin-top: 21px;
+    margin-left: 95px;
+}
+.close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    z-index: 1000;
+}
+/* 游戏结束 */
